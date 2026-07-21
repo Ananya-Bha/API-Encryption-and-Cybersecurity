@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encrypt & Decrypt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card">
+      <header class="hero">
+        <h1>Encrypt & Decrypt your Data</h1>
+        <p class="subtitle">Use a secret key to encode or decode messages instantly.</p>
+      </header>
+
+      <div class="field-group">
+        <label class="field-label" for="messageInput">Enter Text</label>
+        <textarea id="messageInput" class="text-input" placeholder="Enter text..." rows="4"></textarea>
+      </div>
+
+      <div class="controls-row">
+        <div class="key-area">
+          <label class="field-label" for="keyInput">KEY</label>
+          <input id="keyInput" class="key-input" type="text" placeholder="Enter key..." />
+        </div>
+
+        <div class="submit-area">
+          <button type="button" id="submitBtn" class="action-btn submit">GO</button>
+        </div>
+
+        <div class="button-group">
+          <button type="button" id="decodeBtn" class="action-btn decode">DECODE</button>
+          <button type="button" id="encodeBtn" class="action-btn encode">ENCODE</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="outputBox">Output</label>
+        <textarea id="outputBox" class="output-box" readonly rows="5" placeholder="Output..."></textarea>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
