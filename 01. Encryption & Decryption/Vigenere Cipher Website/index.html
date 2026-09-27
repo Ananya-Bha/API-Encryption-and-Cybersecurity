@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Encrypt and decrypt messages with a Vigenere cipher.">
+	<title>Vigenere Cipher</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="app-shell">
+		<header class="app-header">
+			<p class="eyebrow">PLAN FOR CIPHER <span aria-hidden="true">/</span> MODULE 05</p>
+			<div class="signal" aria-hidden="true"><span></span><span></span><span></span></div>
+		</header>
+
+		<section class="cipher-panel" aria-labelledby="page-title">
+			<div class="panel-heading">
+				<p class="panel-index">[ 01 ]</p>
+				<h1 id="page-title">Vigenere Cipher</h1>
+				<p class="panel-description">Transform a message with a repeating letter key.</p>
+			</div>
+
+			<form id="cipher-form" class="cipher-form">
+				<label class="field-label" for="message">Input message</label>
+				<textarea id="message" name="message" rows="5" placeholder="Type your message here..." spellcheck="false"></textarea>
+
+				<div class="controls-row">
+					<div class="key-field">
+						<label class="field-label" for="key">Secret key</label>
+						<input id="key" name="key" type="text" placeholder="Enter a letter key..." autocomplete="off" spellcheck="false">
+					</div>
+					<div class="action-group" aria-label="Cipher actions">
+						<button class="action-button encrypt-button" type="submit" data-operation="encrypt">
+							<span aria-hidden="true">&gt;_</span> Encrypt
+						</button>
+						<button class="action-button decrypt-button" type="button" data-operation="decrypt">
+							<span aria-hidden="true">&lt;_</span> Decrypt
+						</button>
+					</div>
+				</div>
+
+				<div class="output-heading">
+					<label class="field-label" for="result">Output</label>
+					<span id="operation-status" class="status" role="status">Waiting for input</span>
+				</div>
+				<textarea id="result" name="result" rows="5" placeholder="Your result will appear here..." readonly aria-live="polite"></textarea>
+			</form>
+		</section>
+
+		<footer class="app-footer">
+			<span>LETTERS ONLY // KEY REPEATS AUTOMATICALLY</span>
+			<span class="footer-dot" aria-hidden="true"></span>
+			<span>SECURE LOCAL PROCESSING</span>
+		</footer>
+	</main>
+	<script src="scripts.js"></script>
+</body>
+</html>
